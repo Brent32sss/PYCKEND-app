@@ -1,0 +1,8 @@
+build/
+dist/
+*.exe
+*.zip
+.vs/
+.vscode/
+__pycache__/
+*.pyc
