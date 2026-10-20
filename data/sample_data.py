@@ -84,3 +84,63 @@ def complete_order(order_dict):
         PICKER_DATA["stats"]["asignados"] = max(0, PICKER_DATA["stats"]["asignados"] - 1)
         if order_dict["priority"] == "Urgente":
             PICKER_DATA["stats"]["urgentes"] = max(0, PICKER_DATA["stats"]["urgentes"] - 1)
+            
+ # Catálogo e inventario general de la tienda
+STORE_INVENTORY = [
+    {
+        "sku": "LAC-001",
+        "name": "Leche 1L",
+        "zone": "REF",
+        "location": "REF · Estante 1, nivel A",
+        "stock": 36,
+    },
+    {
+        "sku": "ABA-001",
+        "name": "Arroz 1kg",
+        "zone": "G1",
+        "location": "G1 · Estante 1, nivel B",
+        "stock": 50,
+    },
+    {
+        "sku": "SNA-002",
+        "name": "Galletas",
+        "zone": "G2",
+        "location": "G2 · Estante 1, nivel A",
+        "stock": 24,
+    },
+    {
+        "sku": "LIM-004",
+        "name": "Papel higiénico",
+        "zone": "G3",
+        "location": "G3 · Estante 1, nivel C",
+        "stock": 18,
+    },
+    {
+        "sku": "PER-008",
+        "name": "Manzana",
+        "zone": "PAN",
+        "location": "PAN · Estante 2, nivel A",
+        "stock": 42,
+    },
+    {
+        "sku": "BEB-003",
+        "name": "Gaseosa 2L",
+        "zone": "REF",
+        "location": "REF · Estante 2, nivel B",
+        "stock": 20,
+    },
+    {
+        "sku": "LIM-001",
+        "name": "Detergente",
+        "zone": "G3",
+        "location": "G3 · Estante 1, nivel A",
+        "stock": 12,
+    },
+    {
+        "sku": "BOL-001",
+        "name": "Bolsas",
+        "zone": "CAJ",
+        "location": "CAJ · Estante 1",
+        "stock": 150,
+    },
+]            
