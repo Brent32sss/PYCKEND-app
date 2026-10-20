@@ -12,7 +12,7 @@ package.domain = com.pickly
 # (source.dir) Source directory (where you put your main.py)
 source.dir = .
 
-# (list) Source include patterns (incluye código, imágenes, kv y datos json/fuentes)
+# (list) Source include patterns
 source.include_exts = py,png,jpg,kv,atlas,json,ttf
 
 # (str) Application versioning
@@ -21,7 +21,7 @@ version = 0.1
 # (list) Application requirements
 requirements = python3,kivy
 
-# (str) Supported orientation
+# (str) Supported orientation (landscape, sensorLandscape, portrait or sensorPortrait)
 orientation = portrait
 
 # (bool) Indicate if the application should be fullscreen or not
@@ -42,22 +42,25 @@ android.ndk = 25b
 # (int) Android NDK API to use
 android.ndk_api = 21
 
-# (bool) Aceptar automaticamente todas las licencias del SDK de Google / Android
+# (bool) Aceptar licencias de Google Android SDK automaticamente
 android.accept_sdk_license = True
 
-# (bool) Copy library instead of making a libpymodules.so
+# (bool) Copiar librerias directamente
 android.copy_libs = 1
 
-# (str) The Android arch to build for
-android.archs = arm64-v8a,armeabi-v7a
+# (str) Arquitectura optimizada para dispositivos modernos (64 bits)
+android.archs = arm64-v8a
 
-# (bool) Enable AndroidX support
+# (bool) Soporte AndroidX
 android.enable_androidx = True
+
+# (str) Rama master de python-for-android para compatibilidad con pip
+p4a.branch = master
 
 [buildozer]
 
-# (int) Log level (0 = error only, 1 = info, 2 = debug (with command output))
+# (int) Log level (0 = error only, 1 = info, 2 = debug)
 log_level = 2
 
-# (int) Display warning upon buildozer run if buildozer spec is older than last buildozer.spec in .buildozer
+# (int) Display warning upon buildozer run if buildozer spec is older than last buildozer.spec
 warn_on_root = 1
