@@ -1,6 +1,7 @@
 from kivy.app import App
 from kivy.core.window import Window
 from kivy.uix.screenmanager import ScreenManager
+from kivy.utils import platform
 
 from screens.login_screen import LoginScreen
 from screens.dashboard_screen import DashboardScreen
@@ -16,10 +17,12 @@ class PickerApp(App):
         self.current_order = None
 
     def build(self):
-        # Configuración segura de la ventana al iniciar la app
-        if Window:
+        # Solo simular tamaño de teléfono en computadoras (Windows/Mac/Linux)
+        # En Android se debe usar la resolución física y densidad del dispositivo
+        if platform not in ("android", "ios"):
             Window.size = (375, 812)
-            Window.clearcolor = (1, 1, 1, 1)
+
+        Window.clearcolor = (1, 1, 1, 1)
 
         sm = ScreenManager()
         sm.add_widget(LoginScreen())
